@@ -1,0 +1,190 @@
+/* --- Popular Trips Section Styles --- */
+
+.popular-trips-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 4rem ;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  /* width: 100em; */
+  /* border: 2px solid #444; */
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Trip Cards Grid */
+.trip-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Trip Card Styling */
+.popular-trip-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 480px;
+  height: 320px; 
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  text-align: left;
+}
+
+.popular-trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Semi-transparent overlay for all content */
+.popular-trip-card .card-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes content to the bottom */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Card content within the overlay */
+.popular-trip-card .card-content {
+  position: relative;
+  z-index: 2;
+  /* No need for color or padding here as it's handled by the overlay */
+}
+
+/* Card details (text) */
+.popular-trip-card .card-headline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.popular-trip-card .card-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+.popular-trip-card .card-description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Card Footer and Button */
+.card-footer {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.view-details-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #f64747;
+  padding: 0.25rem 1.5rem;
+  border: 2px solid #f64747;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #f64747;
+  color: #fff;
+  border: 2px solid #fff;
+
+}
+
+/* --- Call-to-Action Section --- */
+
+.cta-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-headline {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e64a19;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 768px) {
+  .popular-trips-container {
+    padding: 2rem 1rem;
+  }
+
+  .section-title,
+  .cta-headline {
+    font-size: 1.8rem;
+  }
+
+  .trip-cards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .popular-trip-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .popular-trip-card .card-overlay {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,130 @@
+/* --- About Us Section Styles --- */
+
+.about-us-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5rem 1.5rem; /* Reduced padding */
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+background: url("src/images/banner.jpg");
+opacity: .5;
+}
+
+.about-us-section {
+  max-width: 85em; /* Reduced max-width for a more compact look */
+  margin: 0 auto 3rem auto; /* Adjusted margin */
+  padding: 1.5rem; /* Reduced padding */
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+  padding: 3.5rem;
+z-index: 2;
+
+}
+
+.section-headline {
+  font-size: 2rem; /* Reduced font size */
+  font-weight: 700;
+  color: #ff5722;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-sub-headline {
+  font-size: 1.6rem; /* Reduced font size */
+  font-weight: 600;
+  color: #ff5722;
+text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.section-paragraph {
+  font-size: 1rem; /* Reduced font size */
+  line-height: 1.6; /* Adjusted line height */
+  color: #ccc;
+  margin-bottom: 1.2rem;
+text-align: justify;
+  list-style-type: none;
+
+
+}
+
+/* List Styles for Principles and How It Works */
+.principles-list,
+.how-it-works-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+  max-width: 70em;
+
+  margin: 0 auto;
+}
+
+.principles-list li,
+.how-it-works-list li {
+  font-size: 1rem; /* Reduced font size */
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Bullet points for Principles */
+.principles-list li::before {
+  content: "•";
+  color: #ff5722;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: 0;
+}
+
+/* Numbered list for How It Works */
+.how-it-works-list {
+  counter-reset: step-counter;
+}
+
+.how-it-works-list li {
+  counter-increment: step-counter;
+}
+
+.how-it-works-list li::before {
+  content: counter(step-counter) ".";
+  color: #ff5722;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 3rem 1rem;
+  }
+  .about-us-section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-headline {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .section-sub-headline {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .section-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .principles-list li,
+  .how-it-works-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
